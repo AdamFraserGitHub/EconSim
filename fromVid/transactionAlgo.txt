@@ -1,0 +1,6 @@
+initially the plan was to have one random transaction pairing for the day and if it was unsuccessfull "go home" for the day
+this wouldn't work for multiple reasons not least of which is that it makes no sense and isn't how people work
+
+now random sellers and buyers will be paired, if a transaction was made it's effects take place and the two entities are removed
+from the current round of the simulation. if a transaction was not made the buyer is paired up with a different RANDOM seller that 
+has not yet been involved in a transaction

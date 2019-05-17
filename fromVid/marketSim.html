@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                background-color: rgb(255,255,255);
+                border-radius: 25px;
+                padding: 20px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            html {
+                background-color: rgb(230,230,230);
+                padding: 25px;
+                overflow: hidden;
+            }
+
+            .labelText {
+                font-size: 14px;
+                color:rgb(50, 50, 50);
+                line-height: 0px;
+            }
+
+            .inlineControllDiv {
+                display: inline-block;
+                padding: 5px;
+                border: 1px solid rgb(50, 50, 50);
+                border-radius: 5px;
+            }
+
+            /* center changing size to fit content without squishing it */
+            .centered {
+                margin-left: 50%;
+                transform: translateX(-50%);
+                width: max-content;
+            }
+
+            /* centre irrespective of width */
+            .centeredNoW {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .infoDisplayP {
+                color:rgb(50, 50, 50);
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="avgGoodPriceGraph" class="centeredNoW"></canvas>
+
+        <div class="centered">
+
+            <p class="infoDisplayP centered">average value of good: </p>
+
+            <div class="inlineControllDiv">
+                <p class="labelText" id="numSellersLabel">number of sellers: 5</p>
+                <input type="range" min="0" max="10" value="5" oninput="updateNumSellers()" id="sellersSlider">
+            </div>
+
+            <div class="inlineControllDiv">
+                <p class="labelText" id="numBuyersLabel">number of buyers: 5</p>
+                <input type="range" min="0" max="10" value="5" oninput="updateNumBuyers()" id="buyersSlider">
+            </div>
+        </div>
+    </body>
+
+    <script src="UI.js"></script>
+    <script src="graph.js"></script>
+    <script src="sim.js"></script>
+</html>
